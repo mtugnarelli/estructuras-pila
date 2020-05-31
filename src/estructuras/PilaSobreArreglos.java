@@ -60,7 +60,11 @@ public class PilaSobreArreglos<T> implements Pila<T> {
 	@Override
 	public T obtenerTope() {
 
-		return null;
+		if (estaVacia()) {
+			throw new NoExisteElElemento();
+		}
+
+		return elementos[cantidad - 1];
 	}
 
 }
