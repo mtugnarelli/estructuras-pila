@@ -24,7 +24,7 @@ public class PilaSobreArreglos<T> implements Pila<T> {
 	@Override
 	public boolean estaVacia() {
 
-		return false;
+		return (cantidad == 0);
 	}
 
 	@Override
