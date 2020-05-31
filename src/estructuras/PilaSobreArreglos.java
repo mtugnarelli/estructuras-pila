@@ -30,6 +30,9 @@ public class PilaSobreArreglos<T> implements Pila<T> {
 	@Override
 	public void apilar(T nuevoElemento) {
 		
+		elementos[cantidad] = nuevoElemento;
+
+		cantidad++;
 	}
 
 	@Override
