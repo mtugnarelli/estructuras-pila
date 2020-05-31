@@ -54,7 +54,11 @@ public class PilaSobreArreglos<T> implements Pila<T> {
 	@Override
 	public T desapilar() {
 
-		return null;
+		T tope = obtenerTope();
+		
+		cantidad--;
+		
+		return tope;
 	}
 
 	@Override
