@@ -36,6 +36,6 @@ public class PilaSobreListaEnlazada<T> implements Pila<T> {
 	@Override
 	public T obtenerTope() {
 
-		return null;
+		return elementos.getFirst();
 	}
 }
