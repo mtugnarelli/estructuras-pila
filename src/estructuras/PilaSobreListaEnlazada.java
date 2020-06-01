@@ -24,6 +24,7 @@ public class PilaSobreListaEnlazada<T> implements Pila<T> {
 	@Override
 	public void apilar(T nuevoElemento) {
 		
+		elementos.addFirst(nuevoElemento);
 	}
 
 	@Override
