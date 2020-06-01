@@ -30,7 +30,7 @@ public class PilaSobreListaEnlazada<T> implements Pila<T> {
 	@Override
 	public T desapilar() {
 
-		return null;
+		return elementos.removeFirst();
 	}
 
 	@Override
