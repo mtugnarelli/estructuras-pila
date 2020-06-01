@@ -9,6 +9,7 @@ public class PilaSobreArreglos<T> implements Pila<T> {
 	private T[] elementos;
 	private int cantidad;
 	
+	@SuppressWarnings("unchecked")
 	public PilaSobreArreglos(int capacidadInicial) {
 	
 		elementos = (T[]) new Object[capacidadInicial];
