@@ -1,6 +1,7 @@
 package estructuras;
 
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 /**
  * Implementación de Pila (Stack) basada en una ListaEnlazada.
@@ -9,12 +10,12 @@ import java.util.LinkedList;
 public class PilaSobreListaEnlazada<T> implements Pila<T> {
 
 	private LinkedList<T> elementos;
-	
+
 	public PilaSobreListaEnlazada() {
 
 		elementos = new LinkedList<T>();
 	}
-	
+
 	@Override
 	public boolean estaVacia() {
 
@@ -23,19 +24,33 @@ public class PilaSobreListaEnlazada<T> implements Pila<T> {
 
 	@Override
 	public void apilar(T nuevoElemento) {
-		
+
 		elementos.addFirst(nuevoElemento);
 	}
 
 	@Override
 	public T desapilar() {
 
-		return elementos.removeFirst();
+		try {
+
+			return elementos.removeFirst();
+
+		} catch (NoSuchElementException e) {
+
+			throw new NoExisteElElemento();
+		}
 	}
 
 	@Override
 	public T obtenerTope() {
 
-		return elementos.getFirst();
+		try {
+
+			return elementos.getFirst();
+
+		} catch (NoSuchElementException e) {
+
+			throw new NoExisteElElemento();
+		}
 	}
 }
