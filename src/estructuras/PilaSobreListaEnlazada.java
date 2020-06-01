@@ -18,7 +18,7 @@ public class PilaSobreListaEnlazada<T> implements Pila<T> {
 	@Override
 	public boolean estaVacia() {
 
-		return false;
+		return elementos.isEmpty();
 	}
 
 	@Override
